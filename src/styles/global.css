@@ -1,0 +1,37 @@
+
+
+@layer utilities {
+  @media (max-width: 1400px) {
+    #profile {
+      @apply h-[83vh] mb-24;
+    }
+    .about-containers {
+      @apply flex-wrap;
+    }
+    #contact,
+    #projects {
+      @apply h-fit;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    #desktop-nav {
+      @apply hidden;
+    }
+    #hamburger-nav {
+      @apply flex;
+    }
+    .section__pic-container {
+      @apply w-[275px] h-[275px] mx-auto mb-8;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links {
+      @apply flex-col gap-2 text-center;
+    }
+    .title {
+      @apply text-4xl;
+    }
+  }
+}
