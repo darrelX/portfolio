@@ -1,389 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="icon" type="image/png" href="../../assets/photo1.jpg">
-    <link rel="stylesheet" href="../styles/mediaqueries.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  </head>
-  <body>
-    <!-- <h1 class=" text-3xl font-bold text-blue-700 text-center mt-10 ">
-      Hello, Tailwind CSS via CDN!
-  </h1> -->
-    <nav id="desktop-nav">
-      <div class="logo">Darrel Tcho</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../output.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../assets/photo1.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>My Portfolio</title>
+  <style>
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .rotate-globe {
+      animation: rotation 10s linear infinite;
+    }
+  </style>
+</head>
+
+<body id="body" class="font-['Poppins'] ">
+  <!-- Barre de progression -->
+  <div class="fixed top-0 left-0 w-full h-2 bg-gray-200">
+    <div id="progress-bar" class="h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 w-0"></div>
+  </div>
+  <nav class="bg-gray-100 shadow-md">
+    <div class="flex items-center justify-between h-20 px-20">
+      <div class="text-2xl font-bold">Darrel Tcho</div>
+      <!-- Menu pour les grands écrans -->
+      <ul class="hidden md:flex gap-8 text-lg">
+        <li><a href="#about" class="hover:text-gray-500">About</a></li>
+        <li><a href="#experience" class="hover:text-gray-500">Experience</a></li>
+        <li><a href="#projects" class="hover:text-gray-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+      </ul>
+      <!-- Icône de menu burger -->
+      <div id="burger-icon" class="md:hidden flex flex-col space-y-1 cursor-pointer" onclick="toggleMenu()">
+        <span class="w-8 h-1 bg-black transition-all duration-300 ease-in-out"></span>
+        <span class="w-8 h-1 bg-black transition-all duration-300 ease-in-out"></span>
+        <span class="w-8 h-1 bg-black transition-all duration-300 ease-in-out"></span>
       </div>
-    </nav>
-    <!-- <nav id="hamburger-nav">
-      <div class="logo">Darrel Tcho</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+    </div>
+    <!-- Menu déroulant pour mobile -->
+    <ul id="mobile-menu"
+      class="hidden flex-col gap-6 text-lg items-center bg-gray-200 py-4 md:hidden transition-all duration-300 ease-in-out">
+      <li><a href="#about" class="hover:text-gray-500">About</a></li>
+      <li><a href="#experience" class="hover:text-gray-500">Experience</a></li>
+      <li><a href="#projects" class="hover:text-gray-500">Projects</a></li>
+      <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+    </ul>
+  </nav>
+  <section id="profile" class="flex flex-col md:flex-row items-center justify-center w-[100%] gap-14 p-10 bg-blue-200">
+    <div class="w-80 h-80">
+      <img src="../../assets/image2.jpg" alt="Photo de profil" class="w-full h-full rounded-full">
+    </div>
+    <div class="text-center md:text-left ">
+      <p class="text-xl font-semibold">Hello, I am</p>
+      <h1 class="text-5xl font-bold">Darrel Tcho</h1>
+      <p class="text-2xl mt-2"> Full Stack Mobile Déveloper</p>
+      <div class="mt-6 flex justify-center md:justify-start gap-4">
+        <a href="../../assets/CV.pdf" class="bg-gray-800 text-white px-6 py-3 rounded-full">Download CV</a>
+        <a href="#contact" class="border border-gray-800 px-6 py-3 rounded-full">Contact</a>
       </div>
-    </nav> -->
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="../../assets/profile-pic.png" alt="John Doe profile picture" />
+      <div class="flex justify-center md:justify-start gap-4 mt-4">
+        <a href="http://www.linkedin.com/in/darrelX">
+          <img src="../../assets/linkedin.png" alt="LinkedIn" class="w-10 cursor-pointer">
+        </a>
+        <a href="https://github.com/darrelX/">
+
+          <img src="../../assets/github.png" alt="GitHub" class="w-10 cursor-pointer">
+        </a>
+
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Darrel Tcho</h1>
-        <p class="section__text__p2">Full Stack Mobile Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('../../assets/CV.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="../../assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="../../assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
-        </div>
+    </div>
+  </section>
+  <section id="about" class="flex flex-col items-center justify-center mt-10 w-[100%] gap-1 p-10 ">
+    <p class="text-center text-xs font-semibold">Get to know me better</p>
+    <h1 class="text-center text-4xl font-extrabold">About me</h1>
+    <div class="flex flex-col  md:flex-row  items-center gap-10 mt-10">
+      <div class="h-80 mx-auto">
+        <img src="../../assets/avatar.jpg" alt="À propos" class="w-full h-full rounded-xl">
       </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="../../assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="../../assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="../../assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
+      <div class="flex flex-col justify-center items-stretch  gap-4  w-[60vw]">
+        <div class="flex flex-row items-center justify-center gap-4">
+          <div class="flex-1 flex-col rounded-2xl border border-gray-400 bg-white p-1 text-center shadow-md ">
+            <img src="../../assets/experience.png" alt="Experience icon" class="mx-auto mb-1 h-15" />
+            <h3 class="text-2xl font-semibold">Experience</h3>
+            <p class="text-gray-600">
+              4+ years <br />
+              Frontend Development
+            </p>
           </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+          <div class="flex-1 flex-col rounded-2xl border border-gray-400 bg-white p-1 text-center shadow-md">
+            <img src="../../assets/education.png" alt="Education icon" class="mx-auto mb-1 h-15" />
+            <h3 class="text-2xl font-semibold">Education</h3>
+            <p class="text-gray-600">
+              B.Sc. Bachelors Degree<br />
+              M.Sc. Masters Degree
             </p>
           </div>
         </div>
+        <p class="text-lg leading-relaxed  justify-center items-center mt-2">
+         <b> Full-Stack Mobile | Web Developer </b> <br/> With expertise in Flutter and Next.js, I create high-performance and
+          intuitive mobile applications, highly valued by my clients for their ergonomics and reliability. With over 5
+          years of experience, I have mastered the entire development process, from design to production, ensuring an
+          optimal user experience. My approach combines creativity, precision, and a strong adaptability, allowing me to
+          work effectively in a team or manage projects independently. Always staying up to date with the latest trends
+          in AI and IoT, do you have a mobile app project in mind? Let’s discuss it and bring your ideas to life
+          together!
+        </p>
       </div>
-      <img
-        src="../../assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+    </div>
+  </section>
+  <section id="skill" class="flex flex-col items-center mt-10 justify-center w-[100%] gap-1 p-10">
+    <p class="text-lg text-gray-600">Explore My</p>
+    <h1 class="text-4xl font-extrabold ">Skills</h1>
+    <div class="flex flex-col  md:flex-row gap-x-[5vw] gap-6  mt-8 ">
+      <div class="flex flex-col rounded-2xl border border-gray-400 p-8 justify-center items-center w-auto gap-4 ">
+        <p>Frontend Development</p>
+        <div class="grid grid-cols-2 gap-y-10 gap-x-[2vw] justify-center items-center">
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">Flutter</h3>
+              <p class="text-gray-500">Experienced</p>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="../../assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+          </article>
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">Dart</h3>
+              <p class="text-gray-500">Experienced</p>
             </div>
-          </div>
+          </article>
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">Next.JS</h3>
+              <p class="text-gray-500">Experienced</p>
+            </div>
+          </article>
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">HTML/CSS</h3>
+              <p class="text-gray-500">Experienced</p>
+            </div>
+          </article>
         </div>
       </div>
-      <img
-        src="../../assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="../../assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+      <div class="flex flex-col rounded-2xl border border-gray-400 p-8 justify-center items-center w-auto gap-4">
+        <p>Backend Development</p>
+        <div class="grid grid-cols-2 gap-y-10 gap-x-4">
+          <article class="flex flex-row items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div class="flex flex-col justify-center items-start">
+              <h3 class="font-semibold">Firebase</h3>
+              <p class="text-gray-500">Experienced</p>
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+          </article>
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">Typescript</h3>
+              <p class="text-gray-500">Experienced</p>
             </div>
+          </article>
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">Nest.JS</h3>
+              <p class="text-gray-500">Experienced</p>
+            </div>
+          </article>
+          <article class="flex items-center gap-2 w-30 justify-around">
+            <img src="../../assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
+            <div>
+              <h3 class="font-semibold">MySQL, PostgreSQL</h3>
+              <p class="text-gray-500">Experienced</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="flex flex-col mt-10 p-10 gap-2">
+    <p class="text-center text-xs text-gray-600">Get to know me</p>
+    <h1 class="text-center text-4xl font-extrabold mb-8">About me</h1>
+    <div id="timeline">
+    </div>
+  </section>
+  <section id="project" class="flex flex-col p-10 gap-6 items-center">
+    <p class="text-center text-xs text-gray-600">
+      The following projects highlight my skills and experience through concrete examples of my work.
+    </p>
+    <h1 class="text-center text-4xl font-extrabold">Projects</h1>
+    <div class="grid grid-cols-2 gap-y-5 gap-x-10">
+      <div onclick="fcn(this)"
+        data-images='["../../assets/jong/commercer jeux.png", "../../assets/jong/milieu.png", "../../assets/jong/otp.png", "../../assets/jong/shop.png", "../../assets/jong/welcome.png"]'
+        class="flex flex-col items-center justify-center tems-center gap-y-1 rounded-2xl border border-gray-400 p-6 w-[30vw] h-[30vh] cursor-pointer">
+        <div class="w-full h-[80%] flex justify-center items-center">
+          <img src="./../../assets/jong/jong.png" alt="" srcset="">
+        </div>
+        <p class="text-center font-bold text-1xl">Jong</p>
+        <p class="text-center text-gray-400 text-1xl">Application de ventes de boissons</p>
+      </div>
+      <div onclick="fcn(this)"
+        data-images='["../../assets/onbush/ambassador.png", "../../assets/onbush/course.png", "../../assets/onbush/profil.png", "../../assets/onbush/splash.png", "../../assets/onbush/home.png"]'
+        class="flex flex-col justify-center tems-center gap-y-2 rounded-2xl border border-gray-400 p-6 w-[30vw] h-[30vh] cursor-pointer">
+        <div class=" h-[80%]  flex justify-center items-center">
+          <img src="./../../assets/onbush/onbush_original.svg" alt="" srcset="" class="w-full h-[80%]">
+        </div>
+        <p class="text-center font-bold text-2xl">OnBush</p>
+        <p class="text-center text-gray-400 text-1xl">Mobile Application</p>
+      </div>
+
+
+    </div>
+    <!-- Boîte de dialogue pour afficher les images -->
+    <div id="modal" class="hidden fixed inset-0 bg-black/80 justify-center items-center ">
+
+      <div class="rounded-lg w-[65vw] h-[65vh] p-2 flex flex-col justify-center ">
+        <span id="close-modal" class="cursor-pointer text-2xl font-bold flex justify-end">&times;</span>
+        <div class="flex flex-col items-center">
+          <!-- <h2 class="text-center text-2xl font-bold mb-4">Galerie du projet</h2> -->
+          <!-- Images seront ajoutées ici dynamiquement -->
+          <div id="modal-content" class="flex justify-center overflow-x-auto">
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="../../assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="../../assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
+          <!-- Boutons de navigation -->
+          <div class="flex justify-between w-full px-6">
+            <button id="prev-btn"
+              class="cursor-pointer px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400">Précédent</button>
+            <button id="next-btn"
+              class="cursor-pointer px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400">Suivant</button>
           </div>
         </div>
       </div>
-      <img
-        src="../../assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="../../assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+    </div>
+  </section>
+  <section id="contact" class="flex flex-col  items-center justify-center gap-2 p-10 bg-blue-20">
+    <p class="text-center text-2xs text-gray-600">
+      N'hésitez pas à me contacter via les moyens ci-dessous :
+    </p>
+    <h1 class="text-center text-4xl font-extrabold">Contact me</h1>
+    <div
+      class="mt-4 flex flex-col w-[60vw] justify-start py-4 px-20  border  border-blue-400 rounded-2xl  shadow-2xl shadow-blue-400 gap-3">
+      <h1 class="text-left text-3xl font-bold">Coordonnees</h1>
+      <p class="text-left text-2xs text-gray-600">
+        Restons connecte
+      </p>
+      <div class="flex flex-col items-start">
+        <div class="flex flex-row  justify-center items-center align-middle gap-x-5 mt-1">
+          <i class="fa-solid fa-location-dot text-xl text-blue-500 "></i>
+          <div class="flex flex-col">
+            <p class="font-bold text-blue-400">Adresse</p>
+            <p class="">Douala, Cameroun</p>
+          </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="../../assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        <div class="flex flex-row  justify-center items-center align-middle gap-x-5 mt-1">
+          <i class="fa-brands fa-whatsapp text-xl text-blue-500"></i>
+          <div class="flex flex-col">
+            <p class="font-bold text-blue-400">Appelez-moi</p>
+            <p class="">+237 657590808</p>
+          </div>
+        </div>
+        <div class="flex flex-row  justify-center items-center align-middle gap-x-5 mt-1">
+          <i class="fa-solid fa-envelope text-xl text-blue-500"></i>
+          <div class="flex flex-col">
+            <p class="font-bold text-blue-400">Email</p>
+            <p class="">fowengtcho@gmail.com</p>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-row gap-x-[1vw] justify-stretch items-stretch">
+          <a href="https://github.com/darrelX/">
+            <div class="border border-black rounded-xs flex justify-center items-center p-1 h-8">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </a>
+          <div onclick="genererLienWhatsApp()"
+            class="cursor-pointer border border-black rounded-xs flex justify-center items-center p-1">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+          </div>
+          <a href="http://www.linkedin.com/in/darrelX">
+            <div class="border border-black rounded-xs flex justify-center items-center p-1 h-8">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </a>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
-    </footer> -->
-    <script src="../js/script.js"></script>
-  </body>
+        <div class="h-0.5 bg-gray-600 w-[10vw] mt-2">
+        </div>
+        <a href="../../assets/CV.pdf"
+          class="mt-2 bg-white text-blue-500 px-2 py-1 border border-gray-500 rounded-xl text-[0.6rem]">Télécharger
+          CV</a>
+      </div>
+
+    </div>
+  </section>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>
-
-
