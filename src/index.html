@@ -247,7 +247,8 @@
     <!-- Contact Info & Form Container -->
     <div class="mt-10 flex flex-col md:flex-row gap-10 max-w-5xl w-full px-6">
       <!-- Bloc Informations de Contact -->
-      <div class="flex flex-1 bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 border border-blue-300 items-center justify-center">
+      <div
+        class="flex flex-1 bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 border border-blue-300 items-center justify-center">
         <div class="flex flex-col gap-3 ">
           <!-- Adresse -->
           <div class="flex items-center gap-4">
@@ -306,32 +307,32 @@
       </div>
 
       <!-- Bloc Formulaire -->
-      <form class="flex-1 bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 border border-indigo-300">
+      <form id="contactForm"
+        class="flex-1 bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 border border-indigo-300">
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center">Send me a message</h3>
         <div class="mt-4 flex flex-col gap-4">
-          <input
+          <input id="name"
             class="p-3 w-full border border-gray-300 rounded-lg dark:bg-slate-700 dark:border-gray-600 dark:text-white"
             type="text" placeholder="Name" required />
 
-          <input
+          <input id="email"
             class="p-3 w-full border border-gray-300 rounded-lg dark:bg-slate-700 dark:border-gray-600 dark:text-white"
             type="email" placeholder="Email" required />
 
-          <textarea
+          <textarea id="message"
             class="p-3 w-full border border-gray-300 rounded-lg dark:bg-slate-700 dark:border-gray-600 dark:text-white"
             cols="30" rows="5" placeholder="Message..." required></textarea>
 
           <button type="submit"
             class="w-full bg-indigo-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
-            submit
+            Submit
           </button>
         </div>
       </form>
     </div>
   </section>
 
-
-  <script src="./js/earth.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="./js/script.js" defer></script>
 </body>
 

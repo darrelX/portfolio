@@ -203,46 +203,51 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-window.onscroll = function() {
+window.onscroll = function () {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrolled = (scrollTop / scrollHeight) * 100;
   document.getElementById("progress-bar").style.width = scrolled + "%";
 };
 
-// Attendre que le DOM soit chargé
-document.addEventListener("DOMContentLoaded", function () {
-  // Sélection du formulaire
-  const form = document.querySelector("form");
 
-  // Écoute de l'événement submit
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêcher le rechargement de la page
+// Initialiser EmailJS avec ton User ID
+emailjs.init("MXBLyOZTuzKpfgAqv"); // Remplace avec ton User ID EmailJS
 
-    // Récupération des valeurs du formulaire
-    const name = form.querySelector("input[type='text']").value.trim();
-    const email = form.querySelector("input[type='email']").value.trim();
-    const message = form.querySelector("textarea").value.trim();
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Empêche le rechargement de la page
 
-    if (!name || !email || !message) {
-      alert("Veuillez remplir tous les champs !");
-      return;
-    }
+  // Récupération des valeurs du formulaire
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-    // Configuration EmailJS
-    emailjs.send("service_id", "template_id", {
-      from_name: name,
-      from_email: email,
-      message: message,
-      to_email: "fowengtcho@gmail.com",
+  // Vérification rapide des champs
+  if (!name || !email || !message) {
+    alert("Veuillez remplir tous les champs !");
+    return;
+  }
+
+  // Configuration des paramètres EmailJS
+  const serviceID = "service_seti1bs"; // Remplace avec ton Service ID EmailJS
+  const templateID = "template_k55gf8n"; // Remplace avec ton Template ID EmailJS
+
+  const templateParams = {
+    to_name: "Darrel",
+    from_name: name,
+    from_email: email,
+    message: message
+  };
+
+  // Envoi de l'e-mail avec EmailJS
+  emailjs.send(serviceID, templateID, templateParams)
+    .then((response) => {
+      alert("Email sent successfully ✅");
+      document.getElementById("contactForm").reset(); // Réinitialiser le formulaire
+      console.log("Success:", response);
     })
-    .then(function (response) {
-      alert("Message envoyé avec succès !");
-      form.reset(); // Réinitialiser le formulaire
-    })
-    .catch(function (error) {
-      alert("Erreur lors de l'envoi du message. Réessayez !");
-      console.error("Erreur EmailJS :", error);
+    .catch((error) => {
+      alert("Error sending email ❌");
+      console.error("Erreur:", error);
     });
-  });
 });
