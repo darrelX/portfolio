@@ -7,25 +7,13 @@
   <link href="./output.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="./assets/photo1.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <title>My Portfolio</title>
-  <style>
-    @keyframes rotation {
-      0% {
-        transform: rotate(0deg);
-      }
 
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .rotate-globe {
-      animation: rotation 10s linear infinite;
-    }
-  </style>
 </head>
 
-<body id="body" class="font-['Poppins'] ">
+<body id="body" class="font-['Baloo 2'] ">
   <!-- Barre de progression -->
   <div class="fixed top-0 left-0 w-full h-2 bg-gray-200">
     <div id="progress-bar" class="h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 w-0"></div>
@@ -56,19 +44,19 @@
       <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
     </ul>
   </nav>
-  <section id="profile" class="flex flex-col md:flex-row items-center justify-center w-[100%] gap-14 p-10 bg-blue-200">
+  <section id="profile" class="flex flex-col md:flex-row items-center justify-center w-[100%] gap-10 p-6 bg-blue-200">
     <div class="w-80 h-80">
       <img src="./assets/image2.jpg" alt="Photo de profil" class="w-full h-full rounded-full">
     </div>
     <div class="text-center md:text-left ">
       <p class="text-xl font-semibold">Hello, I am</p>
       <h1 class="text-5xl font-bold">Darrel Tcho</h1>
-      <p class="text-2xl mt-2"> Full Stack Mobile Déveloper</p>
-      <div class="mt-6 flex justify-center md:justify-start gap-4">
-        <a href="./assets/CV.pdf" class="bg-gray-800 text-white px-6 py-3 rounded-full">Download CV</a>
-        <a href="#contact" class="border border-gray-800 px-6 py-3 rounded-full">Contact</a>
+      <p class="text-2xl mt-2"> Full Stack Mobile Developer</p>
+      <div class="mt-4 flex justify-center items-center md:justify-center md:items-center gap-4">
+        <a href="./assets/CV.pdf" class="bg-gray-800 text-white px-4 py-3 rounded-full">Download CV</a>
+        <a href="#contact" class="border border-gray-800 px-4 py-3 rounded-full justify-center items-center">Contact</a>
       </div>
-      <div class="flex justify-center md:justify-start gap-4 mt-4">
+      <div class="flex justify-center md:justify-center gap-4 mt-4">
         <a href="http://www.linkedin.com/in/darrelX">
           <img src="./assets/linkedin.png" alt="LinkedIn" class="w-10 cursor-pointer">
         </a>
@@ -80,14 +68,14 @@
       </div>
     </div>
   </section>
-  <section id="about" class="flex flex-col items-center justify-center mt-10 w-[100%] gap-1 p-10 ">
+  <section id="about" class="flex flex-col items-center justify-center mt-10 w-[100%] gap-1 p-6 ">
     <p class="text-center text-xs font-semibold">Get to know me better</p>
     <h1 class="text-center text-4xl font-extrabold">About me</h1>
     <div class="flex flex-col  md:flex-row  items-center gap-10 mt-10">
       <div class="h-80 mx-auto">
         <img src="./assets/avatar.jpg" alt="À propos" class="w-full h-full rounded-xl">
       </div>
-      <div class="flex flex-col justify-center items-stretch  gap-4  w-[60vw]">
+      <div class="flex flex-col justify-center items-stretch  gap-4 md:w-[60vw]">
         <div class="flex flex-row items-stretch justify-center gap-4">
           <div class="flex-1 flex-col rounded-2xl border border-gray-400 bg-white p-1 text-center shadow-md ">
             <img src="./assets/experience.png" alt="Experience icon" class="mx-auto mb-1 h-15" />
@@ -106,14 +94,16 @@
             </p>
           </div>
         </div>
-        <p class="text-lg leading-relaxed  justify-center items-center mt-2">
-         <b> Full-Stack Mobile | Web Developer </b> <br/> With expertise in Flutter and Next.js, I create high-performance and
-          intuitive mobile applications, highly valued by my clients for their ergonomics and reliability. With over 5
+        <p class="text-lg leading-relaxed  justify-center items-center mt-2 ">
+          <b> Full-Stack Mobile Developer </b> <br /> With expertise in Flutter and Nest.js, I create
+          high-performance and
+          intuitive mobile applications, highly valued by my clients for their ergonomics and reliability. With over 3
           years of experience, I have mastered the entire development process, from design to production, ensuring an
-          optimal user experience. My approach combines creativity, precision, and a strong adaptability, allowing me to
-          work effectively in a team or manage projects independently. Always staying up to date with the latest trends
-          in AI and IoT, do you have a mobile app project in mind? Let’s discuss it and bring your ideas to life
-          together!
+          optimal user experience. Always staying up to date with the latest trends
+          in AI and IoT.<b>
+            Do you have a mobile app project in mind? </b>Let’s discuss it and bring your ideas to
+          life
+          together! </b>
         </p>
       </div>
     </div>
@@ -125,28 +115,28 @@
       <div class="flex flex-col rounded-2xl border border-gray-400 p-6 justify-center items-center w-auto gap-4 ">
         <p>Frontend Development</p>
         <div class="grid grid-cols-2 gap-y-10 gap-x-[2vw] justify-center items-center">
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">Flutter</h3>
               <p class="text-gray-500">Experienced</p>
             </div>
           </article>
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">Dart</h3>
               <p class="text-gray-500">Experienced</p>
             </div>
           </article>
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">Next.JS</h3>
               <p class="text-gray-500">Experienced</p>
             </div>
           </article>
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">HTML/CSS</h3>
@@ -155,31 +145,31 @@
           </article>
         </div>
       </div>
-      <div class="flex flex-col rounded-2xl border border-gray-400 p-8 justify-center items-center w-auto gap-4">
+      <div class="flex flex-col rounded-2xl border border-gray-400 p-6 justify-center items-center w-auto gap-4">
         <p>Backend Development</p>
         <div class="grid grid-cols-2 gap-y-10 gap-x-[2vw]">
-          <article class="flex flex-row items-center gap-2 w-30 justify-around">
+          <article class="flex flex-row items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div class="flex flex-col justify-center items-start">
               <h3 class="font-semibold">Firebase</h3>
               <p class="text-gray-500">Experienced</p>
             </div>
           </article>
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">Typescript</h3>
               <p class="text-gray-500">Experienced</p>
             </div>
           </article>
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">Nest.JS</h3>
               <p class="text-gray-500">Experienced</p>
             </div>
           </article>
-          <article class="flex items-center gap-2 w-30 justify-around">
+          <article class="flex items-center gap-1 w-30 justify-around">
             <img src="./assets/checkmark.png" alt="Experience icon" class="cursor-default h-8 w-8" />
             <div>
               <h3 class="font-semibold">MySQL, PostgreSQL</h3>
@@ -190,34 +180,34 @@
       </div>
     </div>
   </section>
-  <section id="experience" class="flex flex-col mt-10 p-10 gap-2">
+  <section id="experience" class="flex flex-col mt-10 p-auto md:p-10 gap-2">
     <p class="text-center text-xs text-gray-600">Get to know me</p>
-    <h1 class="text-center text-4xl font-extrabold mb-8">About me</h1>
+    <h1 class="text-center text-4xl font-extrabold mb-8">My Experiences</h1>
     <div id="timeline">
     </div>
   </section>
-  <section id="project" class="flex flex-col p-10 gap-6 items-center">
+  <section id="project" class="flex flex-col p-1 md-p-10 mt-10 gap-6 items-center">
     <p class="text-center text-xs text-gray-600">
       The following projects highlight my skills and experience through concrete examples of my work.
     </p>
     <h1 class="text-center text-4xl font-extrabold">Projects</h1>
-    <div class="grid grid-cols-2  gap-x-5">
+    <div class="grid grid-cols-2  gap-x-5 p-2">
       <div onclick="fcn(this)"
         data-images='["./assets/jong/commercer jeux.png", "./assets/jong/milieu.png", "./assets/jong/otp.png", "./assets/jong/shop.png", "./assets/jong/welcome.png"]'
-        class="flex flex-col items-center justify-center  rounded-2xl border border-gray-400 p-6 w-[30vw] h-[40vh] cursor-pointer">
-        <div class="w-full h-[80%] flex justify-center items-center">
-          <img src="./assets/jong/jong.png" alt="" srcset="">
+        class="flex flex-col gap-y-3 items-center justify-center  rounded-2xl border border-gray-400 p-6 w-auto h-auto md:w-[20vw] md:h-[30vh] cursor-pointer">
+        <div class="h-[60%] w-[70%] flex justify-center items-center">
+          <img src="./assets/jong/jong.png" alt="" srcset="" class="w-full h-full">
         </div>
         <p class="text-center font-bold text-1xl">Jong</p>
         <p class="text-center text-gray-400 text-1xl">Application de ventes de boissons</p>
       </div>
       <div onclick="fcn(this)"
         data-images='["./assets/onbush/ambassador.png", "./assets/onbush/course.png", "./assets/onbush/profil.png", "./assets/onbush/splash.png", "./assets/onbush/home.png"]'
-        class="flex flex-col justify-center tems-center  rounded-2xl border border-gray-400 p-6 w-[30vw] h-[40vh] cursor-pointer">
-        <div class=" h-[80%]  flex justify-center items-center">
-          <img src="./assets/onbush/onbush_original.svg" alt="" srcset="" class="w-full h-[80%]">
+        class="flex flex-col justify-center  gap-y-3 items-center  rounded-2xl border border-gray-400 p-6  w-auto h-auto md:w-[20vw] md:h-[30vh] cursor-pointer">
+        <div class="h-[60%] w-[70%] flex justify-center items-center">
+          <img src="./assets/onbush/onbush_original.svg" alt="" srcset="" class="w-full h-full">
         </div>
-        <p class="text-center font-bold text-2xl">OnBush</p>
+        <p class="text-center font-bold text-1xl">OnBush</p>
         <p class="text-center text-gray-400 text-1xl">Mobile Application</p>
       </div>
 
@@ -226,7 +216,7 @@
     <!-- Boîte de dialogue pour afficher les images -->
     <div id="modal" class="hidden fixed inset-0 bg-black/80 justify-center items-center ">
 
-      <div class="rounded-lg w-[65vw] h-[65vh] p-2 flex flex-col justify-center ">
+      <div class="rounded-lg w-[90vw] md:w-[40vw] h-[90vh] md:h-[50vh] p-2 flex flex-col justify-center ">
         <span id="close-modal" class="cursor-pointer text-2xl font-bold flex justify-end">&times;</span>
         <div class="flex flex-col items-center">
           <!-- <h2 class="text-center text-2xl font-bold mb-4">Galerie du projet</h2> -->
@@ -244,67 +234,105 @@
       </div>
     </div>
   </section>
-  <section id="contact" class="flex flex-col  items-center justify-center gap-2 p-10 bg-blue-20">
-    <p class="text-center text-2xs text-gray-600">
-      N'hésitez pas à me contacter via les moyens ci-dessous :
-    </p>
-    <h1 class="text-center text-3xl font-extrabold">Contact me</h1>
-    <div
-      class="mt-4 flex flex-col  justify-start py-4 px-20  border  border-blue-400 rounded-2xl  gap-3">
-      <!-- <h1 class="text-left text-3xl font-bold">Coordonnees</h1>
-      <p class="text-left text-2xs text-gray-600">
-        Restons connecte
-      </p> -->
-      <div class="flex flex-col items-start">
-        <div class="flex flex-row  justify-center items-center align-middle gap-x-5 mt-1">
-          <i class="fa-solid fa-location-dot text-xl text-blue-500 "></i>
-          <div class="flex flex-col">
-            <p class="font-bold text-blue-400 text">Adresse</p>
-            <p class="">Douala, Cameroun</p>
-          </div>
-        </div>
-        <div class="flex flex-row  justify-center items-center align-middle gap-x-5 mt-1">
-          <i class="fa-brands fa-whatsapp text-xl text-blue-500"></i>
-          <div class="flex flex-col">
-            <p class="font-bold text-blue-400">Appelez-moi</p>
-            <p class="">+237 657590808</p>
-          </div>
-        </div>
-        <div class="flex flex-row  justify-center items-center align-middle gap-x-5 mt-1">
-          <i class="fa-solid fa-envelope text-xl text-blue-500"></i>
-          <div class="flex flex-col">
-            <p class="font-bold text-blue-400">Email</p>
-            <p class="">fowengtcho@gmail.com</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col justify-center items-center">
-        <div class="flex flex-row gap-x-[1vw] justify-stretch items-stretch">
-          <a href="https://github.com/darrelX/">
-            <div class="border border-black rounded-xs flex justify-center items-center p-1 h-8">
-              <i class="fa-brands fa-github"></i>
-            </div>
-          </a>
-          <div onclick="genererLienWhatsApp()"
-            class="cursor-pointer border border-black rounded-xs flex justify-center items-center p-1">
-            <i class="fa-brands fa-whatsapp text-xl"></i>
-          </div>
-          <a href="http://www.linkedin.com/in/darrelX">
-            <div class="border border-black rounded-xs flex justify-center items-center p-1 h-8">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </div>
-          </a>
-        </div>
-        <div class="h-0.5 bg-gray-600 w-[10vw] mt-2">
-        </div>
-        <a href="./assets/CV.pdf"
-          class="mt-2 bg-white text-blue-500 px-2 py-1 border border-gray-500 rounded-xl text-[0.6rem]">Télécharger
-          CV</a>
-      </div>
+  <section id="contact" class="py-16 bg-gray flex flex-col items-center">
+    <!-- Header -->
+    <div class="flex flex-col text-center gap-y-3">
+      <p class="mt-2 max-w-lg mx-auto">
+        Vous avez une idée ou un projet ? Parlons-en et voyons ce que nous pouvons accomplir ensemble.
+      </p>
+      <h2 class="text-4xl font-extrabold">Contact</h2>
 
     </div>
+
+    <!-- Contact Info & Form Container -->
+    <div class="mt-10 flex flex-col md:flex-row gap-10 max-w-5xl w-full px-6">
+      <!-- Bloc Informations de Contact -->
+      <div class="flex flex-1 bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 border border-blue-300 items-center justify-center">
+        <div class="flex flex-col gap-3 ">
+          <!-- Adresse -->
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-location-dot text-2xl text-blue-500"></i>
+            <div>
+              <p class="font-bold text-blue-500">Adresse</p>
+              <p class="text-gray-700 dark:text-gray-300">Douala, Cameroun</p>
+            </div>
+          </div>
+
+          <!-- Téléphone -->
+          <div class="flex items-center gap-4">
+            <i class="fa-brands fa-whatsapp text-2xl text-green-500"></i>
+            <div>
+              <p class="font-bold text-blue-500">Appelez-moi</p>
+              <p class="text-gray-700 dark:text-gray-300">+237 657590808</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center gap-4">
+            <i class="fa-solid fa-envelope text-2xl text-red-500"></i>
+            <div>
+              <p class="font-bold text-blue-500">Email</p>
+              <p class="text-gray-700 dark:text-gray-300">fowengtcho@gmail.com</p>
+            </div>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="mt-6 flex justify-center gap-4">
+            <a href="https://github.com/darrelX/"
+              class="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition">
+              <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a onclick="genererLienWhatsApp()"
+              class="p-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition cursor-pointer">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+            </a>
+            <a href="http://www.linkedin.com/in/darrelX"
+              class="p-3 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+          </div>
+
+          <!-- Ligne de séparation -->
+          <div class="h-0.5 bg-gray-300 w-28 mx-auto mt-2"></div>
+
+          <!-- Bouton Télécharger CV -->
+          <div class="mt-4 flex justify-center">
+            <a href="./assets/CV.pdf"
+              class="bg-blue-600 text-white px-4 py-2 border border-blue-700 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+              Télécharger CV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc Formulaire -->
+      <form class="flex-1 bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 border border-indigo-300">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center">Send me a message</h3>
+        <div class="mt-4 flex flex-col gap-4">
+          <input
+            class="p-3 w-full border border-gray-300 rounded-lg dark:bg-slate-700 dark:border-gray-600 dark:text-white"
+            type="text" placeholder="Name" required />
+
+          <input
+            class="p-3 w-full border border-gray-300 rounded-lg dark:bg-slate-700 dark:border-gray-600 dark:text-white"
+            type="email" placeholder="Email" required />
+
+          <textarea
+            class="p-3 w-full border border-gray-300 rounded-lg dark:bg-slate-700 dark:border-gray-600 dark:text-white"
+            cols="30" rows="5" placeholder="Message..." required></textarea>
+
+          <button type="submit"
+            class="w-full bg-indigo-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+            submit
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
-  <script src="./js/script.js"></script>
+
+
+  <script src="./js/earth.js" defer></script>
+  <script src="./js/script.js" defer></script>
 </body>
 
 </html>

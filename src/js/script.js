@@ -117,7 +117,7 @@ function renderMobileTimeline() {
     const timeline = `
       <div class="flex flex-row justify-center mb-10">
         <div class="flex flex-1 flex-row items-start justify-center">
-          <div class=" w-[60vw] rounded-lg border-gray-400 p-6 shadow-lg">
+          <div class=" w-[90vw] rounded-lg border-gray-400 p-6 shadow-lg">
             <p class="text-lg text-center font-bold">${item.title}</p>
             <p class="text-base text-center font-semibold">${item.company}</p>
             <p class="text-center my-2 text-gray-600">${item.description}</p>
@@ -209,3 +209,40 @@ window.onscroll = function() {
   const scrolled = (scrollTop / scrollHeight) * 100;
   document.getElementById("progress-bar").style.width = scrolled + "%";
 };
+
+// Attendre que le DOM soit chargé
+document.addEventListener("DOMContentLoaded", function () {
+  // Sélection du formulaire
+  const form = document.querySelector("form");
+
+  // Écoute de l'événement submit
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+
+    // Récupération des valeurs du formulaire
+    const name = form.querySelector("input[type='text']").value.trim();
+    const email = form.querySelector("input[type='email']").value.trim();
+    const message = form.querySelector("textarea").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Veuillez remplir tous les champs !");
+      return;
+    }
+
+    // Configuration EmailJS
+    emailjs.send("service_id", "template_id", {
+      from_name: name,
+      from_email: email,
+      message: message,
+      to_email: "fowengtcho@gmail.com",
+    })
+    .then(function (response) {
+      alert("Message envoyé avec succès !");
+      form.reset(); // Réinitialiser le formulaire
+    })
+    .catch(function (error) {
+      alert("Erreur lors de l'envoi du message. Réessayez !");
+      console.error("Erreur EmailJS :", error);
+    });
+  });
+});
