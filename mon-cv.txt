@@ -1,0 +1,64 @@
+FOWENG TCHO Darrel
+CAREER OBJECTIVE
+Ingénieur en systèmes intelligents avec 2 ans d’expérience en collecte, traitement et visualisation de données, et 4 ans
+d’expérience en développement mobile. Compétent dans la conception d’applications mobiles conviviales, le développement
+backend et l’architecture micro-service, l’automatisation de rapports, le développement de modèles prédictifs et pour soutenir la prise
+de décision basée sur les données. Je suis motivé à mettre à profit mes compétences techniques et mon esprit analytique afin de
+contribuer efficacement à vos initiatives et d’évoluer au sein de votre organisation.
+EXPERIENCE PROFESSIONELLE
+GIS SARL, Douala Juillet 2025 – Maintenant
+Développeur FullStack
+LawMate App
+• Concevoir, concevoir et développer l’application mobile LawMate, un assistant juridique intelligent basé sur l’IA, adapté
+au contexte réglementaire et législatif camerounais.
+• Diriger et gérer l’équipe technique de développement, en veillant à la qualité des livrables et à une collaboration efficace
+tout au long du cycle de vie du projet.
+GIS SARL, Doual a Février 2025 – Juillet 2025
+Développeur Mobile
+CoPharma App
+• Développement l’application mobile CoPharma, offrant une expérience utilisateur fluide pour la gestion pharmaceutique.
+• Conception et mis en œuvre un moteur de recherche intelligent centralisé via l’intégration d’API, unifiant plusieurs
+applications et services SIG pour un accès et une analyse performante des données.
+Symphoni Social , Douala Décembre 2024 – Février 2025
+Développeur Mobile
+OnBush App
+• Conception et développement de l’application mobile OnBush créant une plateforme d’apprentissage innovante pour les
+étudiants, offrant des résumés de cours et des sujets d’examen corrigés.
+• Implémentation des fonctionnalités avancées telles qu’un système de parrainage ambassadeur, démontrant une expertise
+en développement mobile et en solutions éducatives adaptées.
+• Diriger et coordonner l’équipe technique de développement, en assurant la livraison de projets de haute qualité.
+SYMPHONY SARL, Douala Juillet 2024 – Août 2024
+Développeur Mobile
+Jong App
+• Développer Jong App, une solution mobile facilitant la vente de bière dans les bars camerounais, réduisant les problèmes
+liés à la gestion des espèces.
+• Intégré une fonctionnalité ludique pour augmenter l’engagement des utilisateurs et offrir des opportunités de récompense.
+• Travaillé au sein d’une équipe de développeurs, en livrant le projet dans les délais et selon des standards de haute qualité.
+LAMATER TECH, Yaounde Juin 2023 –Août 2023
+Stagiare Backend & Data Analyst
+• Analyser les ventes et l’engagement utilisateurs avec SQL et méthodes statistiques.
+• Développer des micro-services backend avec Nest.js et optimisé les bases de données pour un accès et une analyse
+efficace des données.
+• Créer des tableaux de bord interactifs avec Power BI pour orienter les décisions et améliorer la rétention des utilisateurs.
+(+237) 6 57 59 08 08 | fowengtcho@gmail.com | Cameroon, Douala
+Linkedin : https://www.linkedin.com/in/darrelX Github : www.github.com/in/darrelX
+PROJETS PERSONNELS
+Vektour App Juillet 2025 – Maintenant
+Flutter Mobile Developer
+• Conçu et développé une application mobile immobilière connectant les propriétaires et les locataires potentiels pour la
+location de biens.
+• Permet aux utilisateurs de rechercher des biens dans des zones géographiques définies.
+• Collaboré avec une petite équipe de développeurs pour livrer le projet de manière autonome.
+• Optimisé le processus de mise en relation pour la location, améliorant l’expérience utilisateur et l’engagement.
+EDUCATION
+Ecole Nationale Supérieure Polytechnique de Douala (ENSPD) Logbessou Douala, Cameroon
+Génie Electrique et Système Intelligent 2020 – 2025
+COMPÉTENCES SUPPLÉMENTAIRES
+• Langages et outils : Flutter, Dart, Firebase, Python (Pandas, NumPy, Matplotlib), JavaScript/TypeScript
+• Gestionnaire d’etat: Bloc, Provider
+• Databases: SQL, MySQL
+• Backend: Node.JS | Nest.JS
+• Architecture : Clean Architecture, Micro-service
+CERTIFICATIONS
+Udemy Février 2025
+Flutter & Dart - The Complete Guide Udemy Course Certificate of Completion

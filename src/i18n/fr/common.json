@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "exp": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Bonjour, je suis"
+  },
+  "sections": {
+    "aboutTitle": "À propos de moi",
+    "aboutSubtitle": "Passionné par l'innovation technologique et l'excellence technique.",
+    "skillsTitle": "Compétences techniques",
+    "skillsSubtitle": "Un éventail de technologies maîtrisées pour des solutions complètes.",
+    "expTitle": "Expérience professionnelle",
+    "projectsTitle": "Projets personnels",
+    "projectsSubtitle": "Des réalisations qui démontrent ma passion pour l'innovation.",
+    "eduTitle": "Formation & Certifications",
+    "eduSubtitle": "Un parcours académique solide et des certifications reconnues.",
+    "contactTitle": "Contactez-moi",
+    "contactSubtitle": "Parlons de votre projet. Je réponds rapidement et avec enthousiasme."
+  },
+  "contact": {
+    "formTitle": "Envoyez-moi un message",
+    "formSubtitle": "Décrivez votre projet et je vous répondrai rapidement",
+    "name": "Nom complet",
+    "email": "Adresse email",
+    "message": "Message",
+    "placeholderName": "Votre nom complet",
+    "placeholderEmail": "votre@email.com",
+    "placeholderMessage": "Décrivez votre projet, vos besoins ou posez-moi une question...",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours..."
+  }
+}
+
+

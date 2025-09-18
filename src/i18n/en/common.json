@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "exp": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello, I'm"
+  },
+  "sections": {
+    "aboutTitle": "About me",
+    "aboutSubtitle": "Passionate about technological innovation and technical excellence.",
+    "skillsTitle": "Technical skills",
+    "skillsSubtitle": "A range of technologies mastered for end‑to‑end solutions.",
+    "expTitle": "Professional experience",
+    "projectsTitle": "Personal projects",
+    "projectsSubtitle": "Work that showcases my passion for innovation.",
+    "eduTitle": "Education & Certifications",
+    "eduSubtitle": "A solid academic background and recognized certifications.",
+    "contactTitle": "Contact me",
+    "contactSubtitle": "Let's talk about your project. I respond quickly and with enthusiasm."
+  },
+  "contact": {
+    "formTitle": "Send me a message",
+    "formSubtitle": "Describe your project and I'll get back to you shortly",
+    "name": "Full name",
+    "email": "Email address",
+    "message": "Message",
+    "placeholderName": "Your full name",
+    "placeholderEmail": "you@email.com",
+    "placeholderMessage": "Describe your project, your needs or ask me a question...",
+    "submit": "Send message",
+    "sending": "Sending..."
+  }
+}
+
+

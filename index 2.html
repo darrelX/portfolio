@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f0f15" />
+    <title>Portfolio • Développeur Créatif</title>
+    <meta name="description" content="Portfolio créatif d'un développeur web – projets, compétences, contact." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-blob" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="#accueil" class="logo" aria-label="Retour à l'accueil">
+          <span>/*</span> Dev <span>*/</span>
+        </a>
+        <nav class="nav">
+          <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav__list">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" aria-label="Basculer le thème" title="Thème">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm8-5a1 1 0 0 1 1 1h1a1 1 0 1 1 0 2h-1a1 1 0 1 1-2 0 1 1 0 0 1 1-1Zm-8 7a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM3 12a1 1 0 0 1 1-1H5a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm1.64-6.36a1 1 0 0 1 1.41 0l.71.7A1 1 0 0 1 6 7.1l-.7-.7a1 1 0 0 1 0-1.42ZM17.3 17.3a1 1 0 0 1 1.41 0l.71.7A1 1 0 0 1 18.7 20l-.7-.7a1 1 0 0 1 0-1.42ZM17.3 6.7a1 1 0 0 1 0-1.41l.7-.71a1 1 0 0 1 1.42 1.42L18.7 6.7A1 1 0 0 1 17.3 6.7ZM5.3 17.3A1 1 0 0 1 6.7 18.7l-.7.7A1 1 0 0 1 4.6 18l.7-.7Z" fill="currentColor"/></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="accueil" class="hero">
+      <div class="hero__grid">
+        <div class="hero__intro reveal">
+          <h1>
+            <span class="eyebrow">Développeur Mobile & Full‑Stack</span>
+            Bonjour, je suis <span class="gradient-text">Darrel</span>
+          </h1>
+          <p class="lead">
+            Ingénieur en systèmes intelligents avec 2 ans d’expérience data et 4 ans
+            en développement mobile. Conception d’apps conviviales, backend
+            micro‑services, automatisation de rapports et modèles prédictifs pour
+            guider la décision.
+          </p>
+          <div class="cta">
+            <a class="btn btn--primary" href="#projets">Voir mes projets</a>
+            <a class="btn btn--ghost" href="mailto:fowengtcho@gmail.com">Me contacter</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/darrelX" target="_blank" rel="noreferrer" aria-label="GitHub" class="social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.12-1.48-1.12-1.48-.92-.64.07-.63.07-.63 1.02.07 1.55 1.07 1.55 1.07.9 1.58 2.36 1.12 2.94.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .85-.28 2.78 1.05.81-.23 1.68-.35 2.55-.35s1.74.12 2.55.35c1.93-1.33 2.78-1.05 2.78-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.95-2.34 4.81-4.57 5.07.36.32.68.95.68 1.92 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/darrelX" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="currentColor" d="M20.45 20.45h-3.55v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7H9.32V9h3.41v1.56h.05c.47-.9 1.61-1.85 3.31-1.85 3.54 0 4.19 2.33 4.19 5.36v6.38ZM6.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM4.57 20.45h3.55V9H4.57v11.45Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual reveal">
+          <div class="blob">
+            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=800&auto=format&fit=crop" alt="Portrait" loading="lazy" />
+          </div>
+          <div class="hero__badges">
+            <span class="chip">+5 ans d'expérience</span>
+            <span class="chip">Freelance & Remote</span>
+            <span class="chip">Disponible</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="apropos" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>À propos</h2>
+          <p>Je transforme des idées en interfaces élégantes et performantes.</p>
+        </div>
+        <div class="about reveal">
+          <div class="about__card glass">
+            <h3>Philosophie</h3>
+            <p>
+              Design d'abord, détails toujours. J'aime les micro‑interactions, les
+              transitions fluides et l'architecture soignée.
+            </p>
+          </div>
+          <div class="about__card glass">
+            <h3>Stack</h3>
+            <p>TypeScript, React, Next.js, Node, WebGL, GSAP, Tailwind, Figma.</p>
+          </div>
+          <div class="about__card glass">
+            <h3>Valeur</h3>
+            <p>J'accompagne de l'idéation au déploiement, avec des livrables pixel‑perfect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Compétences</h2>
+          <p>Un mix de technique, de produit et de créativité.</p>
+        </div>
+        <ul class="skills reveal">
+          <li class="skill">Flutter</li>
+          <li class="skill">Dart</li>
+          <li class="skill">Firebase</li>
+          <li class="skill">Python (Pandas, NumPy, Matplotlib)</li>
+          <li class="skill">JavaScript / TypeScript</li>
+          <li class="skill">Bloc / Provider</li>
+          <li class="skill">SQL / MySQL</li>
+          <li class="skill">Node.js / Nest.js</li>
+          <li class="skill">Clean Architecture</li>
+          <li class="skill">Micro‑services</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Expérience professionnelle</h2>
+          <p>Douala, Cameroun — Tel: (+237) 6 57 59 08 08 — fowengtcho@gmail.com</p>
+        </div>
+        <ul class="timeline reveal">
+          <li class="tl">
+            <div class="tl__head">
+              <h3>Développeur FullStack — GIS SARL</h3>
+              <span class="tl__meta">Douala • Juillet 2025 – Maintenant</span>
+            </div>
+            <div class="tl__body">
+              <p class="tl__project">LawMate App</p>
+              <ul>
+                <li>Concevoir et développer une application mobile d’assistant juridique IA adaptée au contexte camerounais.</li>
+                <li>Diriger l’équipe technique et assurer la qualité des livrables durant tout le cycle projet.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl">
+            <div class="tl__head">
+              <h3>Développeur Mobile — GIS SARL</h3>
+              <span class="tl__meta">Douala • Février 2025 – Juillet 2025</span>
+            </div>
+            <div class="tl__body">
+              <p class="tl__project">CoPharma App</p>
+              <ul>
+                <li>Développement d’une app mobile de gestion pharmaceutique à expérience fluide.</li>
+                <li>Conception d’un moteur de recherche intelligent centralisé via intégration d’API et services SIG.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl">
+            <div class="tl__head">
+              <h3>Développeur Mobile — Symphoni Social</h3>
+              <span class="tl__meta">Douala • Décembre 2024 – Février 2025</span>
+            </div>
+            <div class="tl__body">
+              <p class="tl__project">OnBush App</p>
+              <ul>
+                <li>App d’apprentissage avec résumés de cours et sujets d’examens corrigés.</li>
+                <li>Implémentation d’un système de parrainage ambassadeur et coordination technique.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl">
+            <div class="tl__head">
+              <h3>Développeur Mobile — SYMPHONY SARL</h3>
+              <span class="tl__meta">Douala • Juillet 2024 – Août 2024</span>
+            </div>
+            <div class="tl__body">
+              <p class="tl__project">Jong App</p>
+              <ul>
+                <li>Solution de vente de bière pour bars, réduisant les problèmes liés aux espèces.</li>
+                <li>Ajout d’une fonctionnalité ludique pour accroître l’engagement et les récompenses.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl">
+            <div class="tl__head">
+              <h3>Stagiaire Backend & Data Analyst — LAMATER TECH</h3>
+              <span class="tl__meta">Yaounde • Juin 2023 – Août 2023</span>
+            </div>
+            <div class="tl__body">
+              <ul>
+                <li>Analyse des ventes et de l’engagement via SQL et méthodes statistiques.</li>
+                <li>Développement de micro‑services Nest.js et optimisation des bases de données.</li>
+                <li>Création de tableaux de bord Power BI pour guider les décisions.</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projets-personnels" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Projets personnels</h2>
+        </div>
+        <div class="projects">
+          <article class="project card tilt reveal">
+            <div class="card__media" style="--img:url('https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="card__body">
+              <h3>Vektour App — Flutter Mobile Developer</h3>
+              <p>Juillet 2025 – Maintenant</p>
+              <ul>
+                <li>App immobilière connectant propriétaires et locataires.</li>
+                <li>Recherche par zones géographiques définies.</li>
+                <li>Livraison avec une petite équipe de façon autonome.</li>
+                <li>Optimisation du matching pour une meilleure expérience.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Éducation</h2>
+        </div>
+        <div class="about reveal">
+          <div class="about__card glass">
+            <h3>ENSPD, Douala</h3>
+            <p>Génie Électrique et Systèmes Intelligents • 2020 – 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Certifications</h2>
+        </div>
+        <div class="about reveal">
+          <div class="about__card glass">
+            <h3>Udemy — Février 2025</h3>
+            <p>Flutter & Dart – The Complete Guide (Certificate of Completion)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Projets sélectionnés</h2>
+          <p>Quelques réalisations dont je suis fier.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project card tilt reveal" data-title="Interface DataViz" data-description="Dashboard interactif avec animations fluides et mode sombre." data-tags="React,TypeScript,D3" data-images="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1600&auto=format&fit=crop,https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop,https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop">
+            <div class="card__media" style="--img:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="card__body">
+              <h3>Interface DataViz</h3>
+              <p>Dashboard interactif avec animations fluides et mode sombre.</p>
+              <div class="tags">
+                <span>React</span><span>TypeScript</span><span>D3</span>
+              </div>
+              <button class="btn btn--tiny project-open" type="button">Voir</button>
+            </div>
+          </article>
+
+          <article class="project card tilt reveal" data-title="Site Marque Luxe" data-description="Landing premium avec typographies élégantes et micro‑interactions." data-tags="Next.js,GSAP,SEO" data-images="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop,https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop,https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop">
+            <div class="card__media" style="--img:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="card__body">
+              <h3>Site Marque Luxe</h3>
+              <p>Landing premium avec typographies élégantes et micro‑interactions.</p>
+              <div class="tags">
+                <span>Next.js</span><span>GSAP</span><span>SEO</span>
+              </div>
+              <button class="btn btn--tiny project-open" type="button">Voir</button>
+            </div>
+          </article>
+
+          <article class="project card tilt reveal" data-title="Expérience 3D Web" data-description="Scène WebGL légère avec interactions au défilement." data-tags="Three.js,Shaders,Vite" data-images="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1600&auto=format&fit=crop,https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop,https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1600&auto=format&fit=crop">
+            <div class="card__media" style="--img:url('https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="card__body">
+              <h3>Expérience 3D Web</h3>
+              <p>Scène WebGL légère avec interactions au défilement.</p>
+              <div class="tags">
+                <span>Three.js</span><span>Shaders</span><span>Vite</span>
+              </div>
+              <button class="btn btn--tiny project-open" type="button">Voir</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Contact</h2>
+          <p>Parlons de votre projet. Je réponds rapidement.</p>
+        </div>
+        <div id="contact-root" class="reveal"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Haniel — Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Modal Project -->
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop"></div>
+      <div class="modal__dialog" role="document">
+        <button class="modal__close" aria-label="Fermer">×</button>
+        <div class="modal__content">
+          <h3 class="modal__title"></h3>
+          <p class="modal__desc"></p>
+          <div class="modal__tags"></div>
+          <div class="modal__gallery">
+            <button class="gallery__nav prev" aria-label="Précédent">‹</button>
+            <div class="gallery__viewport"><img alt="Projet" /></div>
+            <button class="gallery__nav next" aria-label="Suivant">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- React via CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState } = React;
+
+      function ContactForm() {
+        const [name, setName] = useState("");
+        const [email, setEmail] = useState("");
+        const [message, setMessage] = useState("");
+
+        return (
+          <form
+            className="contact glass"
+            action="https://formsubmit.co/fowengtcho@gmail.com"
+            method="POST"
+          >
+            {/* FormSubmit options */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Nouveau message du portfolio" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_next" value={window.location.href.split('#')[0] + '#contact'} />
+            {/* Honeypot to reduce spam */}
+            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+
+            <div className="field">
+              <label htmlFor="name">Nom</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Votre nom"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="vous@exemple.com"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Décrivez votre besoin"
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </div>
+            <button className="btn btn--primary" type="submit">Envoyer</button>
+          </form>
+        );
+      }
+
+      const rootEl = document.getElementById('contact-root');
+      if (rootEl) {
+        const root = ReactDOM.createRoot(rootEl);
+        root.render(<ContactForm />);
+      }
+    </script>
+  </body>
+  </html>
+
+
