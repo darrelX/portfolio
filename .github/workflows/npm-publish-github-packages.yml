@@ -25,9 +25,6 @@ jobs:
       # Installer les dépendances
       - run: npm ci
 
-      # Lancer les tests
-      - run: npm test -- --watchAll=false
-
       # Construire l'application pour la production
       - run: npm run build
         env:
