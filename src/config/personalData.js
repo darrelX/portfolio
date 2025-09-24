@@ -4,9 +4,9 @@
 export const personalData = {
   // Informations de base
   name: "Darrel FOWENG TCHO",
-  title: "Développeur Mobile & Full‑Stack",
+  title: "Développeur Full‑Stack",
   subtitle: "Ingénieur en systèmes intelligents",
-  bio: "Ingénieur en systèmes intelligents avec 2 ans d'expérience en collecte, traitement et visualisation de données, et 4 ans d'expérience en développement mobile. Spécialisé dans la conception d'applications mobiles conviviales, le développement backend et l'architecture micro-service.",
+  bio: "Développeur FullStack mobile avec 4 ans d’expérience en création d’applications mobiles et backend. Passionné par l’art de transformer des idées en expériences numériques fluides et intuitives. Pour moi, coder, c’est avant tout résoudre des problèmes avec créativité, optimiser le parcours utilisateur et laisser une empreinte durable à travers des solutions techniquement solides et humainement pertinentes. .",
   
   // Photo de profil (placer le fichier dans public/assets/pictures/image.png)
   profileImage: "/assets/pictures/image.png",
