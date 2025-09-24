@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import './App.css';
+import './styles/project-cards.css';
 import personalData from './config/personalData';
 import experienceData from './config/experienceData';
 import skillsData from './config/skillsData';
@@ -332,6 +333,121 @@ function ContactForm() {
   );
 }
 
+function ProjectSection() {
+  const projects = [
+
+    {
+      id: 5,
+      title: 'SparkDjems',
+      description: 'Plateforme e-commerce et services logistiques',
+      image: 'https://hanniel.kouelab.com/images/assoh/assoh-1.jpg', // e-commerce
+      status: 'Terminé',
+      category: 'Full Stack',
+      tags: ['Flutter', 'Nest.JS', 'MySQL', '+1'],
+      demo: 'https://sparkdjems.com',
+      badge: '+6'
+    },
+    {
+      id: 6,
+      title: 'OnBush',
+      description: 'Application de pedagogie',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.bNV0EO61QROb5oG-ogUP4gHaGI?rs=1&pid=ImgDetMain&o=7&rm=3', // education
+      status: 'En cours',
+      category: 'Mobile',
+      tags: ['Flutter', 'BLoC'],
+      demo: 'https://github.com/darrelx/OnBush',
+      badge: '+3'
+    },
+    {
+      id: 8,
+      title: 'VekTour',
+      description: 'Application de recherche de logements',
+      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80', // housing
+      status: 'En cours',
+      category: 'Mobile',
+      tags: ['Flutter', 'BLoC'],
+      demo: 'https://github.com/darrelx/vektour',
+      badge: '+3'
+    },
+    {
+      id: 9,
+      title: 'Viaa',
+      description: 'Plateforme de convoiturage',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.xb2QPz0a-zkk-eacksPncgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3', // carpooling
+      status: 'Terminé',
+      category: 'Web',
+      tags: ['React.Js'],
+      demo: 'https://car.viaa.cm',
+      badge: '+1'
+    },
+
+     {
+      id: 9,
+      title: 'VekTour',
+      description: 'Plateforme de recherche de logements',
+      image: 'https://tse1.mm.bing.net/th/id/OIP.m1bSU5xUQlDzC9fpiIP71QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3', // housing
+      status: 'Terminé',
+      category: 'Web',
+      demo: "https://vektour.com/",
+      tags: ['React.JS'],
+      badge: '+1'
+    },
+  ];
+
+  const categories = [
+    { label: 'Tous', value: 'Tous', count: projects.length },
+    { label: 'Web', value: 'Web', count: projects.filter(p => p.category === 'Web').length },
+    { label: 'Mobile', value: 'Mobile', count: projects.filter(p => p.category === 'Mobile').length },
+    { label: 'Full Stack', value: 'Full Stack', count: projects.filter(p => p.category === 'Full Stack').length }
+  ];
+
+  const [selectedCategory, setSelectedCategory] = React.useState('Tous');
+  const filteredProjects = selectedCategory === 'Tous' ? projects : projects.filter(p => p.category === selectedCategory);
+
+  return (
+    <section>
+      <div>
+        <div className="project-filters">
+          {categories.map(cat => (
+            <button
+              key={cat.value}
+              className={`project-filter-btn${selectedCategory === cat.value ? ' selected' : ''}`}
+              onClick={() => setSelectedCategory(cat.value)}
+            >
+              {cat.label} <span style={{fontWeight:600, marginLeft:4}}>{cat.count}</span>
+            </button>
+          ))}
+        </div>
+        <div className="project-cards">
+          {filteredProjects.map(project => (
+            <div key={project.id} className="project-card">
+              <span className="project-status">{project.status}</span>
+              <span className="project-badge">{project.badge}</span>
+              <img src={project.image} alt={project.title} className="project-image" />
+              <div className="project-title">
+                {project.category === 'Mobile' && <span>📱</span>}
+                {project.category === 'Web' && <span>🌐</span>}
+                {project.category === 'Full Stack' && <span>🖥️</span>}
+                {project.title}
+              </div>
+              <div className="project-description">{project.description}</div>
+              <div className="project-tags">
+                {project.tags.map((tag, idx) => (
+                  <span key={idx} className="project-tag">{tag}</span>
+                ))}
+              </div>
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-demo">Démo</a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 export default function App() {
   const { theme, toggle } = useTheme();
   const { lang, setLang, toggle: toggleLang } = useLanguage();
@@ -388,6 +504,9 @@ export default function App() {
     }
   };
 
+  // ...existing code...
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
     <div className="site">
       {/* Animated Background */}
@@ -400,10 +519,15 @@ export default function App() {
               <span>/*</span> {personalData.name.split(' ')[0]} <span>*/</span>
             </a>
             <nav className="nav">
-              <button className="nav__toggle" aria-label="Menu" aria-expanded="false">
+              <button
+                className={`nav__toggle${navOpen ? ' active' : ''}`}
+                aria-label="Menu"
+                aria-expanded={navOpen}
+                onClick={() => setNavOpen((open) => !open)}
+              >
                 <span></span><span></span><span></span>
               </button>
-              <ul className="nav__list">
+              <ul className={`nav__list${navOpen ? ' nav__list--open' : ''}`}>
                 <li><a href="#accueil">{L.nav.home}</a></li>
                 <li><a href="#apropos">{L.nav.about}</a></li>
                 <li><a href="#competences">{L.nav.skills}</a></li>
@@ -572,45 +696,20 @@ export default function App() {
       </section>
 
       <section id="projets" className="section section--alt">
-        <div className="container">
-          <div className="section__head reveal">
-            <h2>{L.sections.projectsTitle}</h2>
-            <p>{L.sections.projectsSubtitle}</p>
+        {/* Section Projets interactive */}
+        <div className="container relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Mes projets</h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">Une sélection de mes projets les plus significatifs, allant des applications mobiles aux plateformes web complètes</p>
           </div>
-          <div className="projects reveal">
-            {personalProjects.map((project, index) => (
-              <article key={index} className="project card tilt">
-                <div className="card__media" style={{ '--img': `url('${project.cover}')` }}></div>
-                <div className="card__body">
-                  <h3>{project.title}</h3>
-                  <p className="project-subtitle">{project.subtitle}</p>
-                  <p className="project-period">{project.period}</p>
-                  <p>{project.description}</p>
-                  <ul>
-                    {project.details.map((detail, idx) => (
-                      <li key={idx}>{detail}</li>
-                    ))}
-                  </ul>
-                  <div className="tags">
-                    {project.tags.map((tag, idx) => (
-                      <span key={idx}>{tag}</span>
-                    ))}
-                  </div>
-                  <button 
-                    className="btn btn--tiny project-open" 
-                    type="button" 
-                    onClick={() => openProject(project)}
-                  >
-                    Voir les détails
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
+          {/* Filtres catégories */}
+          <ProjectSection />
         </div>
       </section>
+      
 
-      <section id="education" className="section">
+
+  <section id="education" className="section">
         <div className="container">
           <div className="section__head reveal">
             <h2>{L.sections.eduTitle}</h2>
@@ -636,7 +735,10 @@ export default function App() {
             <h2>{L.sections.contactTitle}</h2>
             <p>{L.sections.contactSubtitle}</p>
           </div>
-          <div className="contact-container reveal">
+          <div className="contact-container contact-container--responsive reveal">
+            <div className="contact-form-container">
+              <ContactForm />
+            </div>
             <div className="contact-info">
               <div className="contact-details">
                 <div className="contact-item">
@@ -685,9 +787,6 @@ export default function App() {
                   </a>
                 </div>
               </div>
-            </div>
-            <div className="contact-form-container">
-              <ContactForm />
             </div>
           </div>
         </div>

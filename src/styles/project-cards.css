@@ -1,0 +1,147 @@
+.project-section {
+  padding: 2rem 0;
+}
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-filter-btn {
+  background: #232b3a;
+  color: #b3c2e1;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.project-filter-btn.selected {
+  background: linear-gradient(90deg, #4f8cff 0%, #6c63ff 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px #4f8cff33;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #232b3a;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px #00000022;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 24px #4f8cff44;
+}
+
+
+.project-card .project-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background: #181f2a;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.project-card:hover .project-image {
+  box-shadow: 0 8px 32px #4f8cff55, 0 2px 8px #6c63ff44;
+  transform: scale(1.06) translateY(-6px);
+  outline: 2px solid #4f8cff;
+  outline-offset: 2px;
+  z-index: 2;
+}
+
+.project-card .project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-card .project-description {
+  color: #b3c2e1;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-card .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.project-card .project-tag {
+  background: #181f2a;
+  color: #6c63ff;
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-card .project-badge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #4f8cff;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #4f8cff33;
+}
+
+.project-card .project-status {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: #232b3a;
+  color: #4f8cff;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  border: 1px solid #4f8cff;
+}
+
+.project-card .project-demo {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #4f8cff 0%, #6c63ff 100%);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px #4f8cff33;
+  transition: background 0.2s;
+}
+.project-card .project-demo:hover {
+  background: linear-gradient(90deg, #6c63ff 0%, #4f8cff 100%);
+}
+
+@media (max-width: 700px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
